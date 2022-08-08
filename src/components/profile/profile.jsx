@@ -1,31 +1,37 @@
+import styles from './profile.module.css'
+
 export const Profile = ({user}) => {
   return (
-    <div className="profile">
-      <div className="description">
-        <img
-          src= {user.avatar}
-          alt="User avatar"
-          className="avatar"
-        />
-        <p className="name">{user.username}</p>
-        <p className="tag">{user.tag}</p>
-        <p className="location">{user.location}</p>
-      </div>
+    <div className={styles.profileWrapper}>
+      <div className={styles.profile}>
+        <div className="description">
+          <div className={styles.avatarWrapper}>
+            <img
+              src={user.avatar}
+              alt="User avatar"
+              className={styles.avatar}
+            />
+          </div>
+          <p className={styles.name}>{user.username}</p>
+          <p className={styles.tag}> @{user.tag}</p>
+          <p className={styles.location}>{user.location}</p>
+        </div>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{user.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{user.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{user.likes}</span>
-        </li>
-      </ul>
+        <ul className={styles.stats}>
+          <li className={styles.stat}>
+            <span className="label">Followers</span>
+            <span className={styles.quantity}>{user.stats.followers}</span>
+          </li>
+          <li className={styles.stat}>
+            <span className="label">Views</span>
+            <span className={styles.quantity}>{user.stats.views}</span>
+          </li>
+          <li className={styles.stat}>
+            <span className="label">Likes</span>
+            <span className={styles.quantity}>{user.stats.likes}</span>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
