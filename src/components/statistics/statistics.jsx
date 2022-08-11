@@ -5,17 +5,20 @@ export const Statistics = ({data}) => {
 
   data.forEach((value) => {
     dataArray.push(
-      <li className="item">
-        <span className="label">{value.label}</span>
-        <span className="percentage">{value.percentage}%</span>
+      <li className={styles.item}>
+        <span className={styles.label}>{value.label}</span>
+        <span className={styles.percentage}>{value.percentage}%</span>
       </li>
     )
   })
 
   return (
-    <section className="statistics">
-      <h2 className="title">Upload stats</h2>
-      <ul className="stat-list">
+    <section className={styles.statistics}>
+      <div className={styles.statisticsWrapper}>
+      <h2 className={styles.title}>Upload stats</h2>
+      </div>
+
+      <ul className={styles.statList}>
         {dataArray}
       </ul>
     </section>
