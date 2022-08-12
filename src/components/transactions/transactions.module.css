@@ -1,0 +1,36 @@
+.items {
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 18px;
+  table-layout: auto;
+}
+
+.transactionsDataWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.items:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.valueName {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: space-between;
+  background-color: #01bcd5;
+  padding: 20px 40px;
+}
+
+.valueData {
+  font-size: 20px;
+  padding: 10px;
+  align-items: center;
+}
+
+.valueData::first-letter {
+  text-transform: uppercase;
+}

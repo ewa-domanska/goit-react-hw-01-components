@@ -11,9 +11,11 @@ export const FriendList = ({friends}) => {
   })
 
   return (
-    <ul className={styles.friendList}>
-      {friendsHTMLArray}
-    </ul>
+    <div className={styles.friendListWrapper}>
+      <ul className={styles.friendList}>
+        {friendsHTMLArray}
+      </ul>
+    </div>
   );
 }
 
