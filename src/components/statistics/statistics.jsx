@@ -1,11 +1,13 @@
 import styles from './statistics.module.css'
 
-export const Statistics = ({data}) => {
+export const Statistics = ({title, stats}) => {
   const dataArray = [];
 
-  data.forEach((value) => {
+  stats.forEach((value) => {
     dataArray.push(
-      <li className={styles.item}>
+      <li className={styles.item} style={{
+        backgroundColor: `${getRandomHexColor()}`
+      }}>
         <span className={styles.label}>{value.label}</span>
         <span className={styles.percentage}>{value.percentage}%</span>
       </li>
@@ -15,12 +17,16 @@ export const Statistics = ({data}) => {
   return (
     <section className={styles.statistics}>
       <div className={styles.statisticsWrapper}>
-      <h2 className={styles.title}>Upload stats</h2>
-      </div>
+        {title && <h2 className={styles.title}>{title}</h2>}
 
-      <ul className={styles.statList}>
-        {dataArray}
-      </ul>
+        <ul className={styles.statList}>
+          {dataArray}
+        </ul>
+      </div>
     </section>
   );
+}
+
+function getRandomHexColor() {
+  return`#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }

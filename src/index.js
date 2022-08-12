@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
     <Profile user={user}/>
-    <Statistics data={data}/>
+    <Statistics title="upload stats" stats={data}/>
+    <Statistics stats={data}/>
   </React.StrictMode>
 );
