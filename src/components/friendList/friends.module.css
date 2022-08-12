@@ -1,0 +1,36 @@
+.item {
+  display: flex;
+  align-items: center;
+  background-color: antiquewhite;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 10px;
+  padding: 10px;
+}
+
+.friendList {
+list-style-type: none;
+}
+
+.present {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: lightgreen;
+}
+
+.absent {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.avatar {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.name {
+  font-size: 20px;
+}
